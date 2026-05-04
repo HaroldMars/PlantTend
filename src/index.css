@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+body{
+  background: linear-gradient(to bottom, #9EEC7D 0%, #9EEC7D 50%, white) 100%;
+  margin: 0;
+  height: 100vh;
+  width: 10%;
+  background-repeat: no-repeat;
+}
+
+.Container {
+  position: fixed;
+}
+
+.text {
+  background: linear-gradient(to bottom, #2E843A, #0A1E0D  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  left: 0;
+  margin-top: 100px;
+  margin-left: 120px;
+  color: transparent;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Container-box {
+  height: 450px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 37px;
+  background: rgba(192, 189, 189, 0.1); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgb(255, 255, 255); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ .login-form {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            width: 300px;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            background: #BCBCBC;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            box-sizing: border-box;
+        }
+
+        .forget-pass {
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            font-size: 13px;
+            color: blue;
+        }
+
+        button {
+            width: 50%;
+            margin-left: 60px;
+            padding: 10px;
+            background: rgba(70, 45, 234, 0.322);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3d81c6;
+        }
+
+        .create-account {
+          text-align: center; 
+          margin-top: 30px
+        }
+
+        .create {
+          color: blue;
+        }
+
+        .intro-text {
+          margin-top: 50px;
+          font-size: 10px;
+          margin-left: 50px;
+          text-align: center;
+          position: absolute;
+        }
