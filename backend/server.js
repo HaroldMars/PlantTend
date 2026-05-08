@@ -1,13 +1,14 @@
-const express = require("express");
-const mongoose = require("mongoose");
-require("dotenv").config();
-
-const authRoutes = require("./routes/auth");
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+import authRoutes from "./routes/auth.js";
+import dns from "dns";
 
 const app = express();
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") {
@@ -15,6 +16,8 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 app.use(express.json());
 app.use("/api/auth", authRoutes);
@@ -27,3 +30,6 @@ mongoose.connect(process.env.MONGO_URI)
     });
   })
   .catch(err => console.error("DB connection error:", err));
+
+
+export default app;
